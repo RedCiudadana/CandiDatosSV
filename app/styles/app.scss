@@ -35,7 +35,7 @@ $border-radius: 10px;
 
 // HTML
 
-body {
+body, a {
     font-family: 'HindSiliguri';
     color: #1e2b3d;
 }
@@ -221,6 +221,10 @@ h1, h2, h3, h4, h5, h6, strong {
 .row.high {
     padding-top: 100px;
     padding-bottom: 100px;
+
+    .btn {
+        border-radius: 5px !important;
+    }
 }
 
 // Perfil
@@ -263,5 +267,56 @@ h1, h2, h3, h4, h5, h6, strong {
     .text {
         width: 75%;
         margin: auto;
+        height: 60px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio {
+        width: 80%;
+
+        .item {
+            width: 25%;
+        }
+    }
+}
+
+// Fuentes de información
+
+.fuentes {
+    p {
+        color: #1e2b3d !important;
+    }
+}
+
+.entrevistas {
+    .body {
+        overflow: scroll;
+        height: 300px;
+
+        .card {
+            margin-bottom: 20px;
+
+            .card-text {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.planes {
+    overflow: visible;
+
+    .btn-group {
+        
+        .btn:first-child {
+            width: 200px;
+        }
+
+        .btn {
+            @extend .btn-light;
+            background-color: white;
+            border-radius: 0px;
+        }
     }
 }

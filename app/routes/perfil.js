@@ -58,8 +58,8 @@ export default Route.extend({
       currentParty: currentParty,
       availableInfo: spreadsheet
         .fetch('info-' + this.get('types')[params.type])
-        .then((documentos) => {
-          return documentos.findBy('id', profile.get('id'));
+        .then((documento) => {
+          return documento.findBy('id', profile.get('id'));
         }),
       profileFunctions: spreadsheet
         .fetchConfig('perfil-funcionalidades')
@@ -76,7 +76,17 @@ export default Route.extend({
 
               return true;
             });
-        })
+        }),
+      fuentes: spreadsheet
+        .fetch('fuentes')
+        .then((documento) => {
+          return documento.filterBy('perfil', profile.get('id'));
+      }),
+      entrevistas: spreadsheet
+        .fetch('entrevistas')
+        .then((documento) => {
+          return documento.filterBy('perfil', profile.get('id'));
+      }),
     });
   },
 

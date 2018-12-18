@@ -8,127 +8,12 @@
   {{/car.slide}}
 {{/bs-carousel}}
 
-<div class="container py-5">
-
-  {{!-- Ember Power Select --}}
-  <div class="row">
-    <div class="col-12 text-center">
-      <h5>¿Quiénes son los candidatos a la alcaldía de tu municipio?</h5>
-      {{#power-select
-        options=model
-        selected=profile
-        searchField="nombre"
-        onchange=(action "toProfile")
-      as |profile|}}
-        <strong>{{profile.nombre}}</strong>
-      {{/power-select}}
-    </div>
-  </div>
-
-  {{!-- Filters --}}
-  <div class="row filters d-none">
-    <div class="col-12 text-center">
-      {{!-- Sexo --}}
-      {{#bs-dropdown class="m-2 rounded" as |dd|}}
-        {{#dd.button class="bg-light btn-light"}}Género{{/dd.button}}
-        {{#dd.menu as |menu|}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{esMujer}} onclick={{queue (action (mut esMujer) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-femenino.png" alt="Femenino">
-              Femenino
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{esHombre}} onclick={{queue (action (mut esHombre) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-masculino.png" alt="Masculino">
-              Masculino
-            </label>
-          {{/menu.item}}
-        {{/dd.menu}}
-      {{/bs-dropdown}}
-      {{!-- Municipio --}}
-      {{#bs-dropdown class="m-2 rounded" as |dd|}}
-        {{#dd.button class="bg-light btn-light" disabled="true"}}Municipio<span class="caret"></span>{{/dd.button}}
-        {{#dd.menu as |menu|}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{municipioA}} onclick={{queue (action (mut municipioA) value="target.checked") (action "applyFilter")}}>
-              municipioA
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{municipioB}} onclick={{queue (action (mut municipioB) value="target.checked") (action "applyFilter")}}>
-              municipioB
-            </label>
-          {{/menu.item}}
-        {{/dd.menu}}
-      {{/bs-dropdown}}
-      {{!-- Tipo --}}
-      {{#bs-dropdown class="m-2 rounded" as |dd|}}
-        {{#dd.button class="bg-light btn-light"}}Tipo de elección<span class="caret"></span>{{/dd.button}}
-        {{#dd.menu as |menu|}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{president}} onclick={{queue (action (mut president) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-president.png" alt="Elección presidencial">
-              Presidencial
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{mayor}} onclick={{queue (action (mut mayor) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-mayor.png" alt="Elección municipal">
-              Municipal
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{deputie}} onclick={{queue (action (mut deputie) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-deputie.png" alt="Elección diputados del listado nacional">
-              Diputados Listado Nacional
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{parlacen}} onclick={{queue (action (mut parlacen) value="target.checked") (action "applyFilter")}}>
-              <img src="img/icono-parlacen.png" alt="Elección diputados del parlacen">
-              Diputados Parlacen
-            </label>
-          {{/menu.item}}
-        {{/dd.menu}}
-      {{/bs-dropdown}}
-      {{!-- Partido --}}
-      {{#bs-dropdown class="m-2 rounded" as |dd|}}
-        {{#dd.button class="bg-light btn-light" disabled="true"}}Partido político<span class="caret"></span>{{/dd.button}}
-        {{#dd.menu as |menu|}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{partidos.firstObject.filter}} onclick={{queue (action (mut partidos.firstObject.filter) value="target.checked") (action "applyFilter")}}>
-              partidoA
-            </label>
-          {{/menu.item}}
-          {{#menu.item}}
-            <label>
-              <input type="checkbox" checked={{partidoB}} onclick={{queue (action (mut partidoB) value="target.checked") (action "applyFilter")}}>
-              partidoB
-            </label>
-          {{/menu.item}}
-        {{/dd.menu}}
-      {{/bs-dropdown}}
-    </div>
-  </div>
-
-</div>
-
 <div class="container-fluid bg-light py-4">
-
   {{!-- Portofolio --}}
   <div class="row">
-    <div class="col-10 offset-1">
-      <div id="portfolio" class="portfolio clearfix my-4">
+    <div class="col-10 offset-1 text-center py-5">
+      <h4 class="py-2">Conoce a los candidatos a la Presidencia de El Salvador</h4>
+      <div id="portfolio" class="portfolio clearfix my-4 mx-auto">
         {{#each pagedContent as |profile|}}
           <article class="item {{profile.selector}}">
             <div class="background bg-white">
@@ -141,7 +26,6 @@
 
               <div class="text">
                 <h6>{{profile.nombre}}</h6>
-                <h6 class="font-weight-light">{{profile.electionName}}</h6>
               </div>
 
               <div class="image-party">
@@ -154,18 +38,22 @@
       </div>
     </div>
   </div>
+</div>
 
-  {{!-- Pagination numbers --}}
+<div class="container-fluid bg-dark justify-content-center py-5">
+  {{!-- Fecha --}}
   <div class="row">
-    <div class="col-4 offset-4 text-center">
-      {{page-numbers content=pagedContent}}
+    <div class="col-4 text-right">
+      <img src="img/calendario.png" alt="Calendario: 3 de febrero.">
+    </div>
+    <div class="col-6 text-center py-5">
+      <h1 class="text-white">Elección: Domingo 3 de febrero</h1>
+      <h3 class="text-success">Elecciones generales 2019</h3>
     </div>
   </div>
-
 </div>
 
 <div class="container">
-
   {{!-- ¿Dónde voto? ¿Cuánto falta? ¡Empadrónate! --}}
   <div class="row high">
     <div class="col-4 text-center">
@@ -177,14 +65,30 @@
     <div class="col-4 text-center">
       <button class="btn btn-success btn-square text-white">
         <img src="img/icono-cuanto-falta.png" alt="Icono cuanto falta" height="60px">
-        ¿Cuánto falta?
+        Frente a Frente
       </button>
     </div>
     <div class="col-4 text-center">
       <button class="btn btn-primary btn-square text-white">
         <img src="img/icono-empadronate.png" alt="Icono empadrónate" height="60px">
-        ¡Empadrónate!
+        Resultados
       </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <h5 class="font-weight-light">Un proyecto de:</h5>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+    <div class="col-12 text-center">
+      <h5 class="font-weight-light">Un proyecto de:</h5>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
     </div>
   </div>
 </div>
