@@ -62,7 +62,7 @@ module.exports = function(environment) {
     },
 
     disqus: {
-      shortname: 'candidatos2019'
+      shortname: 'candidatossv2019'
     },
 
     contentSecurityPolicy: contentSecurityPolicy
