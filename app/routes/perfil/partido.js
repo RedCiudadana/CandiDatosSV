@@ -8,9 +8,6 @@ export default Route.extend({
     let partido = this.modelFor('perfil').currentParty;
 
     miembros.pushObjects(data.presidents.toArray());
-    miembros.pushObjects(data.deputies.toArray());
-    miembros.pushObjects(data.parlacens.toArray());
-    miembros.pushObjects(data.mayors.toArray());
 
     miembros = miembros.filter((candidate) => {
       return candidate.get('partido').get('id') === partido.get('id')
