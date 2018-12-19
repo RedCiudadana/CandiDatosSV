@@ -219,8 +219,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 .row.high {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     .btn {
         border-radius: 5px !important;
@@ -332,9 +332,24 @@ h1, h2, h3, h4, h5, h6, strong {
 // Colaboradores
 
 .colaboradores {
+    margin-bottom: 60px;
+
+    h5 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
     img {
-        max-width: 15%;
+        max-width: 33%;
         max-height: 70px;
         margin: 10px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .colaboradores {
+        img {
+            max-width: 15%;
+        }
     }
 }
