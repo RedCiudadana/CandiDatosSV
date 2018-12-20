@@ -293,7 +293,13 @@ h1, h2, h3, h4, h5, h6, strong {
     }
 }
 
+// Entrevistas
+
 .entrevistas {
+    .card {
+        width: 18rem;
+    }
+
     .body {
         overflow: scroll;
         height: 300px;
@@ -357,3 +363,4 @@ h1, h2, h3, h4, h5, h6, strong {
         }
     }
 }
+

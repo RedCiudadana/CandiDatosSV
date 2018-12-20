@@ -157,7 +157,7 @@
       <div class="body">
         {{#each entrevistas as |entrevista|}}
           <a href={{entrevista.url}}>
-            <div class="card" style="width: 18rem;">
+            <div class="card">
               <img class="card-img-top" src="img/entrevista.svg" alt="Imagen de entrevista">
               {{!-- <img class="card-img-top" src={{entrevista.foto}} alt="Imagen de entrevista"> --}}
               <div class="card-body">
@@ -179,14 +179,14 @@
       <div class="body">
         <div class="row">
           <div class="col-3 py-2 text-center">
-            <h5>No.</h5>
+            <h5 class="font-weight-bold">No.</h5>
           </div>
           <div class="col-9 py-2 text-left">
-            <h5>Fuente.</h5>
+            <h5 class="font-weight-bold">Fuente.</h5>
           </div>
           {{#each fuentes as |fuente index|}}
             <div class="col-3 text-center">
-              <strong>{{index}}</strong>
+              <strong class="font-weight-bold">{{index}}.</strong>
             </div>
             <div class="col-9 text-left">
               <a href={{fuente.url}}>
