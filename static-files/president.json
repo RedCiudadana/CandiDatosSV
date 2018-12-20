@@ -1,0 +1,54 @@
+[
+  {
+    "id": "president-1",
+    "nombre": "Candidato 1",
+    "partido": "partido-1",
+    "edad": "45",
+    "estadoCivil": "Estado Civil",
+    "anosProfesional": "20",
+    "numeroColegiado": "Colegiado",
+    "sexo": "Femenino",
+    "fb": "https://www.facebook.com/Redciudadanagt/",
+    "tw": "RedxGuate",
+    "fotoURL": ""
+  },
+  {
+    "id": "president-2",
+    "nombre": "Candidato 2",
+    "partido": "partido-2",
+    "edad": "30",
+    "estadoCivil": "Estado Civil",
+    "anosProfesional": "30",
+    "numeroColegiado": "Colegiado",
+    "sexo": "Masculino",
+    "fb": "https://www.facebook.com/Redciudadanagt/",
+    "tw": "RedxGuate",
+    "fotoURL": ""
+  },
+  {
+    "id": "president-3",
+    "nombre": "Candidato 3",
+    "partido": "partido-3",
+    "edad": "85",
+    "estadoCivil": "Estado Civil",
+    "anosProfesional": "26",
+    "numeroColegiado": "Colegiado",
+    "sexo": "Femenino",
+    "fb": "https://www.facebook.com/Redciudadanagt/",
+    "tw": "RedxGuate",
+    "fotoURL": ""
+  },
+  {
+    "id": "president-4",
+    "nombre": "Candidato 4",
+    "partido": "partido-4",
+    "edad": "42",
+    "estadoCivil": "Estado Civil",
+    "anosProfesional": "23",
+    "numeroColegiado": "Colegiado",
+    "sexo": "Masculino",
+    "fb": "https://www.facebook.com/Redciudadanagt/",
+    "tw": "RedxGuate",
+    "fotoURL": ""
+  }
+]
