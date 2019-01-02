@@ -87,6 +87,11 @@ export default Route.extend({
         .then((documento) => {
           return documento.filterBy('perfil', profile.get('id'));
       }),
+      historial: spreadsheet
+        .fetch('historial')
+        .then((documento) => {
+          return documento.filterBy('perfil', profile.get('id'));
+      })
     });
   },
 

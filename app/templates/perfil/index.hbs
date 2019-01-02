@@ -83,7 +83,7 @@
 </div>
 
 <div class="row">
-  {{!-- Años --}}
+  {{!-- Experiencia Académica --}}
   <div class="col-md-6">
     <div class="panel">
       <div {{action (toggle "years" this)}} class="header d-flex bg-secondary">
@@ -98,7 +98,7 @@
       </div>
     </div>
   </div>
-  {{!-- Cargo --}}
+  {{!-- Historial Político --}}
   <div class="col-md-6">
     <div class="panel">
       <div class="header d-flex bg-secondary" {{action (toggle "charge" this)}}>
@@ -108,7 +108,24 @@
       </div>
       <div class="body">
         {{#bs-collapse collapsed=charge}}
-          <p>{{availableInfo.historialPolítico}}</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Partido</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each model.historial as |partido index|}}
+                <tr>
+                  <td scope="row">{{inc index 1}}</td>
+                  <td>{{partido.partido}}</td>
+                  <td>{{partido.ano}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
         {{/bs-collapse}}
       </div>
     </div>
@@ -179,7 +196,7 @@
           </div>
           {{#each fuentes as |fuente index|}}
             <div class="col-3 text-center">
-              <strong class="font-weight-bold">{{index}}.</strong>
+              <strong class="font-weight-bold">{{inc index 1}}.</strong>
             </div>
             <div class="col-9 text-left">
               <a href={{fuente.url}}>

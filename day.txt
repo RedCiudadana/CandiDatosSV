@@ -1,0 +1,13 @@
+
+CandiDatosSV
+
+    1. Agregando titulo de la pagina, metadata autor, descripción, keywords.
+    2. Agregando Google Analytics (id de seguimiento).
+    3. Corregir textos en el header.
+    4. Corregir textos en menú principal.
+    5. Agregar Botón de compartir Facebook
+    6. Eliminando segundo slider, cambiando texto de recordatorio, agregando enlace a 'Donde voto'.
+    7. Agregando Frente a Frente.
+    8. Agregando imágen de candidato a Frente a Frente.
+    9. Agregar colaboradores al footer.
+    10. Actualizando datos que se muestran en perfil.
