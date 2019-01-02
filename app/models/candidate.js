@@ -44,6 +44,22 @@ export default Model.extend({
   estadoCivil: attr('string'),
 
   /**
+   * Lugar de nacimiento
+   *
+   * @property lugarDeNacimiento
+   * @type String
+   */
+  lugarDeNacimiento: attr('string'),
+
+  /**
+   * Fecha de nacimiento
+   *
+   * @property fechaDeNacimiento
+   * @type String
+   */
+  fechaDeNacimiento: attr('string'),
+
+  /**
    * anosProfesional
    *
    * @property anosProfesional
