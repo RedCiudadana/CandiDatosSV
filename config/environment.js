@@ -94,7 +94,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.APP.staticFilesUrl = 'http://iri.candidatos.gt/static-files/';
     ENV.googleAnalytics = {
-      webPropertyId: 'UA-101167670-1'
+      webPropertyId: 'UA-131614768-1'
     };
   }
 
