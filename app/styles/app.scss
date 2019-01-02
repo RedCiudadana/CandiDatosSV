@@ -334,8 +334,24 @@ h1, h2, h3, h4, h5, h6, strong {
 // Frente a frente
 
 .frente-a-frente {
-    p {
+    img {
+        width: 15%;
+        height: auto;
+    }
+
+    .col-md-6 p {
+        @extend .bg-light;
+        @extend  .rounded;
+        padding: 20px;
+        width: 80%;
+        float: right;
         text-align: justify;
+    }
+
+    small {
+        display: block;
+        float: right;
+        margin-top: 30px;
     }
 }
 

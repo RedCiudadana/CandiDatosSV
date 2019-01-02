@@ -16,7 +16,7 @@ export default Route.extend({
 
   setupController(controller, model) {
     this._super(controller, model);
-    this.controllerFor('perfil.frente-a-frente').set('perfilUno', this.modelFor('application').presidents.firstObject);
-    this.controllerFor('perfil.frente-a-frente').set('perfilDos', this.modelFor('application').presidents[1]);
+    this.controllerFor('frente-a-frente').set('perfilUno', this.modelFor('application').presidents.firstObject);
+    this.controllerFor('frente-a-frente').set('perfilDos', this.modelFor('application').presidents.firstObject);
   },
 });
