@@ -33,9 +33,7 @@ Router.map(function() {
   });
 
   // Considerar si se va a utlizar
-  this.route('partidos', function() {
-    this.route('partido', { path: '/partido/:id'});
-  });
+  this.route('partidos');
 
   this.route('perfiles', { path: '/perfiles/:type'});
   this.route('frente-a-frente');

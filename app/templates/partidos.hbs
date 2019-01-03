@@ -1,6 +1,24 @@
-{{#bs-nav type="tabs" justified=true as |nav|}}
-  {{#each model as |item|}}
-    {{#nav.item}}{{#nav.link-to "partidos.partido" item.id}}{{item.nombreCorto}}{{/nav.link-to}}{{/nav.item}}
-  {{/each}}
-{{/bs-nav}}
-{{outlet}}
+<div class="container-fluid bg-light py-4">
+  {{!-- Portofolio --}}
+  <div class="row">
+    <div id="portfolio" class="portfolio clearfix my-4 mx-auto">
+      {{#each model as |profile|}}
+        <article class="item {{profile.selector}}">
+          <div class="background bg-white">
+
+            <div class="image">
+              {{!-- {{#link-to "perfil" profile.typeCommonName profile.id}} --}}
+                <img alt={{profile.codigo}} src={{profile.logo}}>
+              {{!-- {{/link-to}} --}}
+            </div>
+
+            <div class="text">
+              <h6>{{profile.nombreCorto}}</h6>
+            </div>
+
+          </div>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</div>
