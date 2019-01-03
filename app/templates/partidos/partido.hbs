@@ -17,16 +17,24 @@
               <tr>
                 <td class="p-0 border-top-0">
                   <small>
-                    <strong>Nombre corto:</strong>
-                    {{model.nombreCorto}}
+                    <strong>Nombre:</strong>
+                    {{model.nombreCompleto}}
                   </small>
                 </td>
               </tr>
               <tr>
                 <td class="p-0 border-top-0">
                   <small>
-                    <strong>Nombre completo:</strong>
-                    {{model.nombreCompleto}}
+                    <strong>Fecha de inscripción:</strong>
+                    {{model.fechaInscripcion}}
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-0 border-top-0">
+                  <small>
+                    <strong>Secretario general:</strong>
+                    {{model.secretarioGeneral}}
                   </small>
                 </td>
               </tr>
@@ -37,6 +45,18 @@
       {{!-- Redes sociales --}}
       <div class="col-md-3 social-side text-left d-block p-3">
         <div class="d-block mt-3">
+          <div>
+            <a href={{model.web}} target="_blank" rel="noopener">
+              <img src="img/icono-tw.png" alt="Página web">
+              {{model.web}}
+            </a>
+          </div>
+          <div>
+            <a href={{model.correo}} target="_blank" rel="noopener">
+              <img src="img/icono-tw.png" alt="Correo electrónico">
+              {{model.correo}}
+            </a>
+          </div>
           <div>
             <a href={{model.tw}} target="_blank" rel="noopener">
               <img src="img/icono-tw.png" alt="Twitter">
