@@ -1,8 +1,56 @@
-{{yield}}
-<div class="container-fluid bg-white">
-  <div>
-    {{front-portfolio
-    profiles=model.members
-    }}
-  </div>
+<div class="w-100 bg-light perfil-container">
+  <section class="container profile my-4 py-5">
+    <div class="row m-1 border bg-white panel">
+      {{!-- Imagen --}}
+      <div class="col-md-3 text-center p-3">
+        <img
+          src={{model.logo}}
+          alt="Logo de {{model.nombreCompleto}}"
+          width="100%">
+      </div>
+      {{!-- Información general --}}
+      <div class="col-md-6 p-3">
+        <div class="table-responsive-md">
+          <h3>{{model.nombreCorto}}</h3>
+          <table class="table w-75">
+            <tbody>
+              <tr>
+                <td class="p-0 border-top-0">
+                  <small>
+                    <strong>Nombre corto:</strong>
+                    {{model.nombreCorto}}
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-0 border-top-0">
+                  <small>
+                    <strong>Nombre completo:</strong>
+                    {{model.nombreCompleto}}
+                  </small>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {{!-- Redes sociales --}}
+      <div class="col-md-3 social-side text-left d-block p-3">
+        <div class="d-block mt-3">
+          <div>
+            <a href={{model.tw}} target="_blank" rel="noopener">
+              <img src="img/icono-tw.png" alt="Twitter">
+              {{model.tw}}
+            </a>
+          </div>
+          <div>
+            <a href={{model.fb}} target="_blank" rel="noopener">
+              <img src="img/icono-fb.png" alt="Facebook">
+              {{model.nombreCorto}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
