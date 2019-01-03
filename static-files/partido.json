@@ -3,6 +3,10 @@
     "id": "partido-1",
     "nombreCorto": "Partido 1",
     "nombreCompleto": "Nombre Partido 1",
+    "fechaInscripción": "00/00/0000",
+    "secretarioGeneral": "Secretario General",
+    "web": "www.partido1.sv",
+    "correo": "info@partido1.sv",
     "fb": "www.facebook.com/partido-1",
     "tw": "www.twitter.com/partido-1",
     "logoURL": ""
@@ -11,6 +15,10 @@
     "id": "partido-2",
     "nombreCorto": "Partido 2",
     "nombreCompleto": "Nombre Partido 2",
+    "fechaInscripción": "00/00/0000",
+    "secretarioGeneral": "Secretario General",
+    "web": "www.partido1.sv",
+    "correo": "info@partido1.sv",
     "fb": "www.facebook.com/partido-2",
     "tw": "www.twitter.com/partido-2",
     "logoURL": ""
@@ -19,6 +27,10 @@
     "id": "partido-3",
     "nombreCorto": "Partido 3",
     "nombreCompleto": "Nombre Partido 3",
+    "fechaInscripción": "00/00/0000",
+    "secretarioGeneral": "Secretario General",
+    "web": "www.partido1.sv",
+    "correo": "info@partido1.sv",
     "fb": "www.facebook.com/partido-3",
     "tw": "www.twitter.com/partido-3",
     "logoURL": ""
@@ -27,6 +39,10 @@
     "id": "partido-4",
     "nombreCorto": "Partido 4",
     "nombreCompleto": "Nombre Partido 4",
+    "fechaInscripción": "00/00/0000",
+    "secretarioGeneral": "Secretario General",
+    "web": "www.partido1.sv",
+    "correo": "info@partido1.sv",
     "fb": "www.facebook.com/partido-4",
     "tw": "www.twitter.com/partido-4",
     "logoURL": ""
