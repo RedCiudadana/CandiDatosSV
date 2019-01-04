@@ -10,7 +10,8 @@ export default Route.extend({
     const spreadsheet = this.get('spreadsheets');
     return hash({
       profiles: this.modelFor('application').presidents,
-      info: spreadsheet.fetch('info-president')
+      info: spreadsheet.fetch('info-president'),
+      historial: spreadsheet.fetch('historial')
     });
   },
 
@@ -18,5 +19,5 @@ export default Route.extend({
     this._super(controller, model);
     this.controllerFor('frente-a-frente').set('perfilUno', this.modelFor('application').presidents.firstObject);
     this.controllerFor('frente-a-frente').set('perfilDos', this.modelFor('application').presidents.firstObject);
-  },
+  }
 });

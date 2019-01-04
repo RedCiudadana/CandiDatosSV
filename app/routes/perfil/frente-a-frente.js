@@ -10,7 +10,8 @@ export default Route.extend({
     const spreadsheet = this.get('spreadsheets');
     return hash({
       profiles: this.modelFor('application').presidents,
-      info: spreadsheet.fetch('info-president')
+      info: spreadsheet.fetch('info-president'),
+      historial: spreadsheet.fetch('historial')
     });
   },
 
