@@ -50,6 +50,18 @@
     <img src={{model.currentParty.logo}} alt={{model.currentParty.nombreCorto}} class="foto-partido">
     <div class="d-block mt-3">
       <div>
+        <a href={{model.profile.web}} target="_blank" rel="noopener">
+          <img src="img/icono-tw.png" alt="Página web">
+          {{model.profile.web}}
+        </a>
+      </div>
+      <div>
+        <a href={{model.profile.correo}} target="_blank" rel="noopener">
+          <img src="img/icono-tw.png" alt="Correo electrónico">
+          {{model.profile.correo}}
+        </a>
+      </div>
+      <div>
         <a href={{model.profile.tw}} target="_blank" rel="noopener">
           <img src="img/icono-tw.png" alt="Twitter">
           {{model.profile.tw}}
@@ -120,7 +132,7 @@
               {{#each model.historial as |partido index|}}
                 <tr>
                   <td scope="row">{{inc index 1}}</td>
-                  <td>{{partido.partido}}</td>
+                  <td>{{partido.profile}}</td>
                   <td>{{partido.ano}}</td>
                 </tr>
               {{/each}}
